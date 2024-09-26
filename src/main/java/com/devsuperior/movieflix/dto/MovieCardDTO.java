@@ -1,50 +1,60 @@
 package com.devsuperior.movieflix.dto;
 
+import com.devsuperior.movieflix.entities.Movie;
+
 public class MovieCardDTO {
 
-    private Long id;
-    private String title;
-    private String subTitle;
-    private Integer year;
-    private String imgUrl;
+	private Long id;
+	private String title;
+	private String subTitle;
+	private Integer year;
+	private String imgUrl;
 
-    public Long getId() {
-        return id;
-    }
+	public MovieCardDTO(Movie entity) {
+		this.id = entity.getId();
+		this.title = entity.getTitle();
+		this.subTitle = entity.getTitle();
+		this.year = entity.getYear();
+		this.imgUrl = entity.getImgUrl();
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getSubTitle() {
-        return subTitle;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setSubTitle(String subTitle) {
-        this.subTitle = subTitle;
-    }
+	public String getSubTitle() {
+		return subTitle;
+	}
 
-    public Integer getYear() {
-        return year;
-    }
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
+	}
 
-    public void setYear(Integer year) {
-        this.year = year;
-    }
+	public Integer getYear() {
+		return year;
+	}
 
-    public String getImgUrl() {
-        return imgUrl;
-    }
+	public void setYear(Integer year) {
+		this.year = year;
+	}
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
+	}
 }
